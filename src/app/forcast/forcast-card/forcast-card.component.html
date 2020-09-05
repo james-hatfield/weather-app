@@ -1,0 +1,29 @@
+<ng-container *ngIf="day">
+  <div class="card">
+    <div class="date">
+      <h3>{{ day.date | date: "longDate" }}</h3>
+    </div>
+    <div class="image-container">
+      <img class="icon" src="assets/sun.svg" alt="Sun icon" />
+    </div>
+    <div class="card-content">
+      <div class="temp">
+        <p>{{ day.temp_avg }}&#176;</p>
+      </div>
+      <ng-container *ngIf="displayTemps">
+        <p>High: {{ day.temp_max }}&#176;</p>
+        <p>Low: {{ day.temp_min }}&#176;</p>
+        <p>Mean: {{ day.temp_mean }}&#176;</p>
+      </ng-container>
+    </div>
+    <div (click)="displayTemps = !displayTemps" class="button">
+      <span *ngIf="displayTemps"
+        >Hide temperatures <i class="fa fa-angle-up" style="font-size: 24px"></i
+      ></span>
+      <span *ngIf="!displayTemps"
+        >Show temperatures
+        <i class="fa fa-angle-down" style="font-size: 24px"></i
+      ></span>
+    </div>
+  </div>
+</ng-container>

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+$color-gradient: linear-gradient(to left, #06beb6, #48b1bf);
+$contrast-color: #171717;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Nunito", "Helvetica Neue", sans-serif;
+  background-image: $color-gradient;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
